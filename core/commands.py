@@ -28,3 +28,10 @@ def rid(file_namepath):
     except FileNotFoundError:
         print("Error: No Such File Or Directory")
     
+def enter(file_namepath,content):
+    try:
+        with open (f'system/{file_namepath}','a') as f:
+            f.write(content+'\n')
+    except:
+        pass
+

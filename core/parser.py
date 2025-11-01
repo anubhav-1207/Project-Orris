@@ -40,3 +40,12 @@ def parser(command,line):
             commands.rid(file_namepath)
         except KeyError:
             print("Error: Invalid File Name/Path")
+
+    elif func == 'enter':
+        file_namepath = command[1]
+        while True:
+            content = input('')
+            if content == 'orr exit editor':
+                break
+            else:
+                commands.enter(file_namepath,content)
