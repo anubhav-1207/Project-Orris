@@ -1,6 +1,8 @@
 import sys
 from core import commands
 from data.system.system_info import osinfo,cpuinfo,raminfo
+from applications.turtle import turtle 
+# from authentication.auth import reset_pass
 
 def parser(command,line):
     func = command[0]
@@ -49,3 +51,10 @@ def parser(command,line):
                 break
             else:
                 commands.enter(file_namepath,content)
+
+    elif line == 'turtle':
+        turtle()
+        
+    # elif func == 'reset':
+    #     new_pass = command[2]
+    #     reset_pass(new_pass)

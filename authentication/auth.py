@@ -51,5 +51,22 @@ def auth():
             print("Decryption failed:", e)
             auth_password()
 
+
+
+
     auth_username()
     auth_password()
+
+# def reset_pass(new_pass):
+#     with open(password_file,'r') as f:
+#         old_pass = f.read()
+
+#     password = input("Enter Old Password : ")
+#     while True:
+#         if password == old_pass:
+#             with open(password_file,'w') as f:
+#                 f.write(new_pass)
+#                 break 
+
+#         else:
+#             continue
