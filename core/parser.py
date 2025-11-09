@@ -46,15 +46,17 @@ def parser(command,line):
     elif func == 'enter':
         file_namepath = command[1]
         while True:
-            content = input('')
+            content = input('').strip()
             if content == 'orr exit editor':
-                break
+                break   
             else:
                 commands.enter(file_namepath,content)
 
     elif line == 'turtle':
         turtle()
         
-    # elif func == 'reset':
-    #     new_pass = command[2]
-    #     reset_pass(new_pass)
+    elif func == 'show' and command[1] == 'f':
+        file_namepath = command[2]
+        with open (f'system/{file_namepath}', 'r') as f:
+            print(f.read())
+
